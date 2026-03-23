@@ -5,8 +5,8 @@ plugins {
 }
 
 group = 'com.thexeler'
-version = '0.0.1-SNAPSHOT'
-description = 'Trade game backend'
+version = '0.0.2-SNAPSHOT'
+description = 'WHIN game backend'
 
 java {
     toolchain {
@@ -27,13 +27,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
-    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-    runtimeOnly 'mysql:mysql-connector-java:8.0.33'
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    implementation 'org.hibernate.orm:hibernate-community-dialects'
+    implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
 }
 
 bootJar {
